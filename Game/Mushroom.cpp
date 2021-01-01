@@ -136,7 +136,7 @@ void Mushroom::Render()
 
 	animationSet->at(ani)->Render(nx, x, y, alpha);
 	
-	RenderBoundingBox();
+	//RenderBoundingBox();
 }
 
 void Mushroom::SetState(int state)

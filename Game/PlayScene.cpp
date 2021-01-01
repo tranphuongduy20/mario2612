@@ -42,7 +42,7 @@ PlayScene::PlayScene() : Scene()
 {
 	keyHandler = new PlayScenceKeyHandler(this);
 	LoadBaseObjects();
-	ChooseMap(2*STAGE_1);
+	ChooseMap(STAGE_1);
 	Game::GetInstance()->ResetTimer();
 }
 
@@ -344,15 +344,15 @@ void PlayScene::PlayerTailAttackEnemy()
 				{
 					for (UINT i = 0; i < listitems.size(); i++)
 					{
-						Entity* obj = new CBrick(2032, 368, 16, 16);
-						CBrick* cBrick = dynamic_cast<CBrick*>(obj);
+						//Entity* obj = new CBrick(2032, 368, 16, 16);
+						//CBrick* cBrick = dynamic_cast<CBrick*>(obj);
 						if (listitems[i]->GetType() == EntityType::P)
 						{
 
 							ItemP* itemP = dynamic_cast<ItemP*>(listitems[i]);
 							itemP->isCollis = true;
 						}
-						cBrick->SetState(CBRICK_STATE_COLLISION);
+						//cBrick->SetState(CBRICK_STATE_COLLISION);
 					}
 					return;
 				}

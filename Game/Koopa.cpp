@@ -466,7 +466,7 @@ void Koopa::SetState(int State)
 		break;
 	case KOOPA_RED_STATE_DIE_AND_MOVE:
 		//vx = nx * 0.1;
-		vx = Mario->nx* 0.1;
+		vx = Mario->nx* 0.2;
 		last_state = KOOPA_RED_STATE_DIE_AND_MOVE;
 		break;
 	case KOOPA_RED_STATE_REVIVE:
@@ -477,7 +477,7 @@ void Koopa::SetState(int State)
 		break;
 	case KOOPA_RED_STATE_DIE_AND_MOVE_UP:
 		last_state = KOOPA_RED_STATE_DIE_AND_MOVE_UP;
-		vx = Mario->nx * 0.3;
+		vx = Mario->nx * 0.2;
 		break;
 	case KOOPA_RED_STATE_HOLDING:
 		last_state = KOOPA_RED_STATE_HOLDING;
@@ -517,7 +517,7 @@ void Koopa::SetState(int State)
 		break;
 	case KOOPA_GREEN_STATE_DIE_AND_MOVE_UP:
 		last_state = KOOPA_GREEN_STATE_DIE_AND_MOVE_UP;
-		vx = Mario->nx * 0.3;
+		vx = Mario->nx * 0.2;
 		break;
 	case KOOPA_GREEN_STATE_REVIVE:
 		last_state = KOOPA_GREEN_STATE_REVIVE;

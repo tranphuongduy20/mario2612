@@ -144,7 +144,7 @@ void Money::Render()
 
 	animationSet->at(ani)->Render(nx, x, y, alpha);
 
-	RenderBoundingBox();
+	//RenderBoundingBox();
 }
 
 void Money::SetState(int state)

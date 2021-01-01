@@ -61,8 +61,8 @@ void Player::Reset()
 	isFly = false;
 	flyTrip = false;
 	isCheckCanFly = true;
-	this->x = 600;
-	this->y = 300;
+	this->x = 20;
+	this->y = 350;
 	nx = 1;
 	holdthing = nullptr;
 	startVentTime = GetTickCount64();

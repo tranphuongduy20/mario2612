@@ -116,7 +116,7 @@ void Leaf::Render()
 	else
 		nx = 1;
 	animationSet->at(ani)->Render(nx, x, y, alpha);
-	RenderBoundingBox();
+	//RenderBoundingBox();
 }
 
 void Leaf::SetState(int state)
