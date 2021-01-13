@@ -126,6 +126,7 @@
     <ClInclude Include="AnimationIntro.h" />
     <ClInclude Include="Animations.h" />
     <ClInclude Include="Brick.h" />
+    <ClInclude Include="BrickMove.h" />
     <ClInclude Include="BrickStand.h" />
     <ClInclude Include="BrokenBrick.h" />
     <ClInclude Include="Bullet.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="KeyboardHandler.h" />
     <ClInclude Include="Koopa.h" />
+    <ClInclude Include="KoopaBullet.h" />
     <ClInclude Include="Leaf.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="MushGreen.h" />
@@ -184,6 +186,7 @@
     <ClCompile Include="AnimationIntro.cpp" />
     <ClCompile Include="Animations.cpp" />
     <ClCompile Include="Brick.cpp" />
+    <ClCompile Include="BrickMove.cpp" />
     <ClCompile Include="BrickStand.cpp" />
     <ClCompile Include="BrokenBrick.cpp" />
     <ClCompile Include="Bullet.cpp" />
@@ -211,6 +214,7 @@
     <ClCompile Include="IntroScene.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Koopa.cpp" />
+    <ClCompile Include="KoopaBullet.cpp" />
     <ClCompile Include="Leaf.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Money.cpp" />

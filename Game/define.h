@@ -169,6 +169,8 @@ enum EntityType
 	PIPE = 58,
 	MUSHGREEN = 59,
 	ENDSCENE = 60,
+	MOVEBRICK = 61,
+	KOOPABULLET = 62,
 
 	//Effect Zone 70-80
 	FIREEFFECT = 70,

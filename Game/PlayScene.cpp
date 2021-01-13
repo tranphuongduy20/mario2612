@@ -31,6 +31,8 @@
 #define	OBJECT_TYPE_MARIO_WORLDMAP	31
 #define	OBJECT_TYPE_HAMMER_BROTHER	32
 #define	OBJECT_TYPE_MSPEECH_BUBBLE	33
+#define	OBJECT_TYPE_BRICKMOVE	25
+#define	OBJECT_TYPE_KOOPA_BULLET	26
 
 #define CAMERA_HEIGHT_1 245
 #define CAMERA_HEIGHT_2 184
@@ -42,7 +44,7 @@ PlayScene::PlayScene() : Scene()
 {
 	keyHandler = new PlayScenceKeyHandler(this);
 	LoadBaseObjects();
-	ChooseMap(STAGE_1);
+	ChooseMap(STAGE_1*3);
 	Game::GetInstance()->ResetTimer();
 }
 
@@ -1433,17 +1435,6 @@ void PlayScene::_ParseSection_OBJECTS(string line)
 
 		DebugOut(L"[INFO] Player object created!\n");
 		break;
-	//case 9999:
-	//	if (worldPlayer != NULL)
-	//	{
-	//		DebugOut(L"[ERROR] MARIO object was created before!\n");
-	//		return;
-	//	}
-	//	obj = new Player(x, y);
-	//	player = (Player*)obj;
-
-	//	DebugOut(L"[INFO] Player object created!\n");
-	//	break;
 	case OBJECT_TYPE_BRICK:
 	{
 		obj = new Brick(atof(tokens[4].c_str()),atof(tokens[5].c_str()));
@@ -1461,6 +1452,17 @@ void PlayScene::_ParseSection_OBJECTS(string line)
 		obj->SetAnimationSet(ani_set);
 		listObjects.push_back(obj);
 		DebugOut(L"[test] add cbrick !\n");
+		break;
+	}
+	case OBJECT_TYPE_BRICKMOVE:
+	{
+		obj = new BrickMove(x, y, atof(tokens[4].c_str()), atof(tokens[5].c_str()));
+		//obj->SetPosition(x, y);
+		LPANIMATION_SET ani_set = animation_sets->Get(ani_set_id);
+
+		obj->SetAnimationSet(ani_set);
+		listObjects.push_back(obj);
+		DebugOut(L"[test] add BrickMove !\n");
 		break;
 	}
 	case OBJECT_TYPE_END_SCENE:
@@ -1567,6 +1569,18 @@ void PlayScene::_ParseSection_OBJECTS(string line)
 		obj->SetAnimationSet(ani_set);
 		listEnemies.push_back(obj);
 		DebugOut(L"[test] add goomba !\n");
+		break;
+	}
+	case OBJECT_TYPE_KOOPA_BULLET:
+	{
+		obj = new KoopaBullet(player);
+		//obj->id_goomba = atoi(tokens[6].c_str());
+		obj->SetPosition(x, y);
+		LPANIMATION_SET ani_set = animation_sets->Get(ani_set_id);
+
+		obj->SetAnimationSet(ani_set);
+		listEnemies.push_back(obj);
+		DebugOut(L"[test] add KoopaBullet !\n");
 		break;
 	}
 	case OBJECT_TYPE_MUSHROOM:

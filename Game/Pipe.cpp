@@ -23,7 +23,7 @@ void Pipe::Render()
 
 	animationSet->at(ani)->Render(1, x, y);
 
-	//RenderBoundingBox();
+	RenderBoundingBox();
 }
 
 //void Pipe::GetBoundingBox(float& l, float& t, float& r, float& b)

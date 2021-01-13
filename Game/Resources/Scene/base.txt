@@ -378,7 +378,7 @@
 #0	20	365	1
 #0	1350	85	1
 #0	2050	365	1
-0	1220	365	1
+0	20	330	1
 
 #Speech Bubble
 43	38.5	26	3
@@ -386,3 +386,4 @@
 #Stage1
 Resources/Scene/world_select_scene.txt	176	64
 Resources/Scene/scene1.txt	2816	656
+Resources/Scene/scene4.txt	2816	656

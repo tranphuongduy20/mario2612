@@ -169,6 +169,12 @@
     <ClCompile Include="EndScene.cpp">
       <Filter>Header Files\GameSource\Object\Obstacle</Filter>
     </ClCompile>
+    <ClCompile Include="BrickMove.cpp">
+      <Filter>Header Files\GameSource\Object\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="KoopaBullet.cpp">
+      <Filter>Header Files\GameSource\Object\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h">
@@ -338,6 +344,12 @@
     </ClInclude>
     <ClInclude Include="EndScene.h">
       <Filter>Header Files\GameSource\Object\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="BrickMove.h">
+      <Filter>Header Files\GameSource\Object\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="KoopaBullet.h">
+      <Filter>Header Files\GameSource\Object\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
